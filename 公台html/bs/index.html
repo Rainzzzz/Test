@@ -1,0 +1,617 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+    <meta charset="gb2312" http-equiv="Content-Type" content="text/html">
+    <title>Bootstrap介绍</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script type="text/javascript" src="../jQuery/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="in.js"></script>
+
+   <!-- <script>
+        function check(){
+            document.getElementById("myCheck").checked=true
+        }
+        function unCheck(){
+            document.getElementById("myCheck").checked=false
+        }
+    </script>-->
+ <!--   <script>
+        function createOrder(){
+            coffee=document.forms[1].coffee;
+            txt="";
+            for(i=0;i<coffee.length;++i){
+                if(coffee[i].checked){
+                    txt=txt+coffee[i].value+" "
+                }
+            }
+            document.getElementById("order").value="您订购的咖啡有："+txt
+        }
+
+    </script>-->
+    <!--<script>-->
+        <!--function change(){-->
+            <!--document.getElementById("name").value=document.getElementById("name").value.toUpperCase();-->
+        <!--}-->
+    <!--</script>-->
+
+    <!--<script>-->
+        <!--function check(bb){-->
+            <!--document.getElementById("answer").value=bb;-->
+        <!--}-->
+        <!--function formReset(){-->
+            <!--document.getElementById("a").reset()-->
+        <!--}-->
+
+        <!--function fav(){-->
+            <!--var myList=document.getElementById("myList");-->
+            <!--document.getElementById("favo").value =myList-->
+                    <!--.options[myList.selectedIndex].text;-->
+        <!--}-->
+    <!--</script>-->
+    <!--<script>
+/*function moveNumbers(){
+    var no=document.getElementById("no");
+    var option=no.options[no.selectedIndex].text;
+    var txt=document.getElementById("result").value;
+    txt=txt+option;
+    document.getElementById("result").value=txt;
+}*/
+
+        function checkLen(x,y)
+        {
+            if(y.length==x.maxLength)
+            {
+                var next=x.tabIndex;
+                if(next<document.getElementById("myForm").length)
+                {
+                    document.getElementById("myFrom").elements[next].focus();
+                }
+            }
+        }-->
+       <!-- function disable(){
+            document.getElementById("Me").disabled=true;
+        }
+function enable(){
+    document.getElementById("Me").disabled=false;
+}
+    </script>-->
+
+    <!--<script>
+        function removeOption(){
+            var x=document.getElementById("mySelect");
+            x.remove(x.selectedIndex)
+        }
+        function changeBorder(){
+            var a=document.getElementById("myTable").border;
+          a=Number(a)+Number(1);
+            document.getElementById("myTable").border=a;
+
+        }
+        function createCaption(){
+            var x=document.getElementById("myTable").createCaption();
+            x.innerHTML="标题"
+        }
+
+        var c=1;
+
+        function timed(){
+            /*var t=setTimeout("alert('9999999999999')",3000);*/
+
+            document.getElementById('tte').value=c;
+            c=c+1000;
+            t=setTimeout("timed()",1);
+        }
+function show_popup(){
+    var p=window.createPopup();
+    var pbody= p.document.body;
+    pbody.style.backgroundColor="pink";
+    pbody.style.border="solid black 1px";
+    pbody.innerHTML="这是一个pop-up！在pop-up外面点击";
+    p.show(150,150,200,50,document.body);
+        }
+var b=2000;
+        function tsm(){
+            var t=setTimeout("alert('时间到')",b);
+        }
+
+
+
+    </script>-->
+    <script>
+//        $(document).ready(function(){
+//            $("#q").click(function(){
+//                $("#p2").hide();
+//            });
+//            $("#p").click(function(){
+//                $("#p2").show();
+//            });
+//        })
+//        $(document).ready(function(){
+//            $("#pp").click(
+//                    function(){
+//                        $("#p2").css("background-color","red");
+//                    }
+//            )
+//        })
+//
+//        function ww(){
+//            document.write("88888");
+//        }
+//
+//        $(document).ready(
+//                function(){
+//                    $("#pp").click(
+//                            function(){
+//                                $(".ax").parents(".ex").hide(fast,ww())
+//
+//                            }
+//                    )
+//                }
+//        );
+//$(document).ready(
+//        function(){
+//            $("#tt").click(
+//                    function(){
+//                        $("#div1").fadeIn(500);
+//                        $("#div2").fadeIn(1000);
+//                        $("#div3").fadeIn(1500);
+//                        $(".ex").slideToggle(1000);
+//                    }
+//            )
+//        }
+//);
+      /*  $(document).ready(
+                function(){
+                    $("#tt").click(
+                            function() {
+                                $("#div5").animate({
+                                    right:'400px',
+                                    opacity:'0.4',
+                                    height:'250px',
+                                    width:'250px'});
+                            }
+                    );
+                }
+        );*/
+
+
+//$(document).ready(function(){
+//    $("button").click(function(){
+//        $("div").animate({
+//            left:'+=20px',
+//            width:'+=20px',
+//            height:'+=30px'
+//        });
+//    });
+//});
+//        $(document).ready(
+//                function(){
+//                    $("#tt").click(
+//                            function(){
+//                                var dd=$("#div5");
+//                                dd.animate({
+//                                    width:'250px',opacity:"0.5"
+//                                },"slow");
+//                                dd.animate({
+//                                    height:'250px',opacity:"0.9"
+//                                },"slow");
+//                                dd.animate({
+//                                    height:'80px'
+//                                });
+//                                dd.animate({
+//                                    width:'160px'
+//                                });
+//                               $("#div6").css("color","red").slideDown(1000).slideUp(1000);
+//
+//
+//                            }
+//                    );
+
+//                    $("#rr").click(
+//                            function(){
+//                                var dd=$("#div10");
+//                                dd.slideDown(1000);
+//                            })
+//                    $("#qq").click(
+//                            function(){
+//                                var dd=$("#div10");
+//                                dd.hide(500,
+//                                function(){
+//                                    alert("hidden!")
+//                                }
+//                                );
+//                            });
+//                }
+//        );
+
+$(document).ready(function(){
+    $("#hhh").bind({
+        click: function () {
+            $("#rt").slideToggle();
+        },
+        mouseover: function () {
+            $("#rt").css("background-color", "red");
+        },
+        mouseout: function () {
+            $("#rt").css("background-color", "white"
+            )
+        },
+        hover: function(){
+        $("#jj").css("background-color","yellow")
+        },
+
+    })
+})
+$(document).ready(
+        function(){
+            $("#ii").focus(
+                function(){
+                    $("#ii").css("background-color","red")
+                }
+            );
+            $("#ii").blur(
+                    function(){
+                        $("#ii").css("background-color","yellow")
+                    }
+            )
+        }
+)
+
+$(document).ready(
+        function(){
+            $("#hhh").click(
+                    function(){
+                        $("#rrt").replaceWith("Hello")
+                    }
+            )
+        }
+)
+
+    </script>
+
+</head>
+<!--
+
+<P>你喜欢什么？</P>
+
+<form action=""></form>
+
+<form action="" >
+    <input type="checkbox" name="coffee" value="奶"/>奶油 <br/>
+    <input type="checkbox" name="coffee" value="糖"/>糖 <br/>
+    <input type="button" value="发送订单" onclick="createOrder()"/><br/><br/>
+    <input type="text" id="order" size="60"/>
+</form>
+
+<form action="">
+    名字：<input type="text" id="name" />
+    转化：<input type="button" class="btn" onclick="change()"/>
+</form>
+
+<form action="" id="a">
+    <input type="radio" name="browser" onclick="check(this.value)" value="Internet Explorer"/>Internet Explorer <br/>
+   喜欢： <input type="text" id="answer" size="20" value=""/>
+    <input type="button"  onclick="formReset()" value="重置"/>
+</form>
+
+
+
+<form action="">
+<select name="" id="myList" onchange="fav()">
+    <option value="">888</option>
+    <option value="">999</option>
+</select>
+<p>你最喜欢的数字是：<input type="text" id="favo" size="20"/></p>
+</form>
+
+-->
+<!--<select name="" id="no">
+    <option value="">0</option>
+    <option value="">1</option>
+    <option value="">2</option>
+    <option value="">3</option>
+    <option value="">4</option>
+</select>
+<input type="button" onclick="moveNumbers()" value="-&ndash;&gt;"/>
+<input type="text" id="result" size="20"/>
+</body>-->
+<!--
+<form  id="myForm">
+    <input id="aa" type="text"/>
+    <br/>
+    <input id="bb" type="text" accesskey="2"/>
+    <input  size="3" tabindex="1" maxlength="3" onkeyup="checkLen(this,this.value)"/>
+    <input  size="2" tabindex="2" maxlength="2" onkeyup="checkLen(this,this.value)"/>
+    <input  size="3" tabindex="3" maxlength="3" onkeyup="checkLen(this,this.value)"/>
+</form>
+
+-->
+<body>
+
+<p class="lead">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.</p>
+<small>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.</small>
+<p class="text-center">Vivamus sagel augue laoree</p>
+<p class="text-left">Vivamus sagel augue laoree</p>
+<p class="text-muted">Vivamus sagel augue laoree</p>
+<p class="text-success">Vivamus sagel augue laoree</p>
+<p class="text-warning">Vivamus sagel augue laoree</p>
+<p class="text-info">Vivamus sagel augue laoree</p>
+<p>Vivamus sagel augue <abbr title="88888888888888888888888888888">laoree</abbr></p>
+
+
+
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<!--
+<img id="pic" src="1.png" alt=""/>
+<br/>
+<br/>
+<input type="button" onclick="pp()" value="改大小"/><br/>
+<input type="button" onclick="ch()" value="改源"/>
+<input type="button" onclick="dd()" value="重新加载"/>
+-->
+<!--
+<form action="   " id="jaijai" >
+<select name="" id="Me">
+    <option value="">111</option>
+    <option value="">222</option>
+    <option value="">333</option>
+    <option value="">4444</option>
+
+</select>
+</form>
+<br/>
+<br/>
+<input type="button" onclick="disable()" value="禁用"/>
+<input type="button" onclick="enable()" value="启用"/>
+<input type="button" onclick="getOptions()" value="输出所有项"/>
+-->
+<!--<script>
+    document.write("ID是："+document.getElementById("Me").form.id);
+document.write("选项数目是："+document.getElementById("Me").options.length)
+    document.getElementById("Me").multiple=true;
+
+</script>-->
+<!--
+<form action="">
+    <select name="" id="mySelect">
+        <option value="">111</option>
+        <option value="">222</option>
+        <option value="">333</option>
+    </select>
+    <input type="button" onclick="removeOption()" value="888888"/>
+</form>
+
+<table border="1" id="myTable" style="position: fixed">
+    <tr>
+        <td>11</td>
+        <td>22</td>
+    </tr>
+    <tr>
+        <td>33</td>
+        <td>44</td>
+    </tr>
+</table>
+<input type="button" onclick="changeBorder()" value="99999"/>
+<a href="http://www.baidu.com"><input type="button" onclick="createCaption()" value="000000"/></a>
+
+-->
+<!--<input type="button" onclick="timed()" value="888888"/>
+<input type="text" id="tte"/>-->
+<!--<button onclick="show_popup()">
+    pop-up!
+</button>
+
+
+<input type="button" onclick="tsm()" value="时间警告"/>
+
+<div id="p">
+    <p id="c1">11111</p>
+
+    <p id="c2">222222</p>
+    <input type="button"  onclick="b()" value="3333333333"/>
+</div>-->
+
+<!--
+<h2>8888888</h2>
+<p id="p1">5555555</p>
+<p id="p2">6666666</p>
+<div class="ex"  style=" background-color: #286090">
+    <div class="ax">
+        asdddddddddddddddddddddddddddddddddd
+    </div>
+    好像在淝南家园小区中间路
+    有一次路过好像看到卫生服务站中心字样
+    好像在淝南家园小区中间路
+    有一次路过好像看到卫生服务站中心字样好像在淝南家园小区中间路
+    有一次路过好像看到卫生服务站中心字样
+</div>
+<button id="q" type="button">按下</button>
+<button id="pp" type="button" onclick="Jiajia()">按下</button>
+<br/>
+<br/>
+<br/>
+-->
+
+<button id="tt">点击使三个矩形渐入</button>
+<button id="rr">开始</button>
+<button id="qq">停止</button>
+
+
+<!--<div id="div1" style="width:80px;height:80px;display:none;background-color:red;"></div>
+<br>
+<div id="div2" style="width:80px;height:80px;display:none;background-color:green;"></div>
+<br>
+<div id="div3" style="width:80px;height:80px;display:none;background-color:blue;"></div>
+<br>
+<div id="div4" style="width:80px;height:80px;background-color:blue;"></div>-->
+<!--
+<div id="div5" style="position:absolute;width:160px;height:80px;background-color:#fffb1d;"></div>
+<br/>
+<div id="div10" style="display:none;float: left;left:200px;position:absolute;width:160px;height:80px;background-color:#dbd7ff;">Hello world!Hello world!Hello world!Hello world!Hello world!</div>
+
+<div id="div6" style="display:none;float: left;left:200px;position:absolute;width:160px;height:80px;background-color:#dbd7ff;">星期日星期日星期日星期日星期日星期日星期日星期日星期日星期日星期日 world!Hello world!Hello world!Hello world!Hello world!</div>
+-->
+
+
+
+<p id="jj">11111111</p>
+<p id="hh">22222222</p>
+文本：<input type="text" id="ii" value="33333"/>
+<ol>
+    <li>6666</li>
+    <li>8888</li>
+</ol>
+<br/>
+<button id="j">1111</button>
+<button id="h">222</button>
+<br/>
+<br/>
+
+<button id="iii">load</button>
+
+
+<h2 id="rt">请点击load按钮，通过 jQuery AJAX 改变这段文本。</h2>
+<h2 id="rrt">请点击load按钮，通过 jQuery AJAX 改变这段文本。</h2>
+
+<button id="hhh">向页面发送 HTTP GET 请求，然后获得返回的结果</button>
+
+<br/>
+<br/>
+<button id="op" class="btn btn-primary" value="5555">我的按钮触发动画</button>
+<input id="io" type="button" value="yuyuyuy"/>
+
+<div id="huh" style="color:blue;background-color:yellow;width:100px;height:100px;position:absolute">animate</div>
+
+<h3 id="test">请点击下面的按钮，通过 jQuery AJAX 改变这段文本。</h3>
+
+
+<div>
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+</div>
+
+
+<button class="btn btn-large btn-success" type="button">Large button</button>
+
+<!--keydown按下任意键-->
+<!--keyup弹起任意键-->
+<!--keypress按下字符键abc  123  特殊字符-->
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+<script>
+    $(document).ready(function(){
+        $("#op").click(function(){
+//            $("#huh").animate({
+//                left:'200px',opacity:'0.6',height:'150',width:'160px'
+//            });
+//
+//            $("#huh").css({
+//                "background-color":"red",
+//                       "color":"green"
+//
+//            });
+            document.getElementById("io").value="888888888888888";
+        });
+    });
+
+   /* $(document).ready(
+            function(){
+                $("#h").click(
+                        function(){
+                            $("ol").append("<li>4444</li>")
+                        }
+                )
+            }
+    )*/
+
+
+
+
+
+/*
+//$(document).ready(
+//        function(){
+//            $("#j").click(
+//                    function(){
+//                    $("#jj").text("gggggg");}
+//            );
+//
+//            $("#h").click(
+//                    function(){
+//                        $("#hh").html("<b>hhhhhhh</b>")
+//                    }
+//            );
+//
+//            $("#i").click(
+//                    function(){
+//                        $("#ii").val("oooooooo")
+//                    }
+//            )
+//
+//        }
+//);
+*/
+
+
+    /*var parent=document.getElementById("p");
+    var child=document.getElementById("c1");
+    var cc=document.createTextNode("adsl");
+    var dd=cc.toUpperCase();
+    parent.removeChild(child);
+    parent.appendChild(dd);
+var ff="adsl";
+    var gg=ff.toUpperCase();
+    function b(){
+        var ff="adsl";
+        var gg=ff.toUpperCase();
+        document.write(gg);
+    }*/
+   /* var hh="heart will go on";
+//    document.write(hh.indexOf("O"));
+    document.write(hh.replace(/will/,"when")+"<br>");
+
+    document.write(Date());*/
+/*
+    var d=new Date();
+    var e= d.getDay();
+    var weekday=new Array(7);
+    weekday[0]="星期日";
+    weekday[1]="星期一";
+    weekday[2]="星期二";
+    weekday[3]="星期三";
+    weekday[4]="星期四";
+    weekday[5]="星期五";
+    weekday[6]="星期六";
+document.write("今天是"+weekday[e]+"<br>");
+document.write(Math.max(8,10)+"<br>");
+    document.write(Math.min(8,10)+"<br>");
+    var patt2="heart will go on";
+    var patt1=new RegExp("x");
+document.write(patt1.test(patt2));*/
+    /*document.write(hh);
+document.write("<p>"+hh.big()+"</p>");
+    document.write(hh.link("http://www.baidu.com"));*/
+</script>
+
+<!--<frameset cols="20%,20%,20%">
+    <frame src="1.png" />
+    <frame src="https://www.baidu.com/" />
+    <frame src="https://www.baidu.com/" />
+</frameset>-->
+</html>
+

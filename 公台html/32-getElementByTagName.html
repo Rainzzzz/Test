@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+window.onload=function(){
+    var lis=document.getElementsByTagName("li");
+    console.dir(lis);
+
+    var color=document.getElementById("re");
+    var lis1=color.getElementsByTagName("li");
+    console.dir(lis1);
+
+    lis1[2].style.background="red";
+
+};
+    </script>
+</head>
+<body>
+<ul id="re">
+    <li>red</li>
+    <li>green</li>
+    <li>blue</li>
+    <li>yellow</li>
+    <li>pink</li>
+</ul>
+<ul>
+    <li>red</li>
+    <li>green</li>
+    <li>blue</li>
+    <li>yellow</li>
+    <li>pink</li>
+</ul>
+</body>
+</html>

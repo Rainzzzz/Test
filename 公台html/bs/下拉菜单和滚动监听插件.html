@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>下拉菜单和滚动监听插件</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="../font/iconfont/iconfont.css">
+
+    <style>
+        .info-content img{
+            margin:12px 0;
+        }
+        .info-right{
+            background-color:#fff;
+            box-shadow:2px 2px 3px #ccc;
+        }
+        .info-right blockquote{
+         margin:0;  padding:0;
+        }
+        .info-right h2{
+            font-size:20px;
+            color:#333;
+            padding:5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="dropdown" id="dr">
+    <button class="btn btn-primary" data-toggle="dropdown" data-target="dr">
+        下拉菜单
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+        <li><a href="#">首页</a></li>
+        <li><a href="#">资讯</a></li>
+        <li><a href="#">产品</a></li>
+        <li><a href="#">关于</a></li>
+    </ul>
+
+</div>
+
+<nav id="nav1" class="navbar navbar-default">
+    <a href="#" class="navbar-brand">web开发</a>
+    <ul class="nav navbar-nav">
+        <li><a href="#html5">HTML5</a></li>
+        <li><a href="#Bootstrap">BootStrap</a></li>
+        <li class="dropdown" >
+            <a href="#" data-toggle="dropdown" data-target="js">JavaScript<span class="caret"></span></a>
+            <ul class="dropdown-menu" id="js">
+                <li><a href="#jQuery">jQuery</a></li>
+                <li><a href="#Yui">Yui</a></li>
+                <li><a href="#Extjs">ExtJS</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+
+
+<nav id="nav2" class="navbar navbar-default">
+    <a href="#" class="navbar-brand">web开发</a>
+    <ul class="nav navbar-nav">
+        <li><a href="#html5">HTML5</a></li>
+        <li><a href="#Bootstrap">BootStrap</a></li>
+        <li class="dropdown" >
+            <a href="#" data-toggle="dropdown" data-target="js">JavaScript<span class="caret"></span></a>
+            <ul class="dropdown-menu" id="js">
+                <li><a href="#jQuery">jQuery</a></li>
+                <li><a href="#Yui">Yui</a></li>
+                <li><a href="#Extjs">ExtJS</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+
+<div data-target="#nav1" data-offset="0" data-spy="scroll" style="padding:0 20px;height:200px;overflow:auto;position:relative">
+
+   <section class="sec">
+
+    <h4 id="html5">HTML5 <a href="#" onclick="removeSec(this)">删除</a></h4>
+    <p>货代，从字面来看是货运代理的简称。从工作内容来看是接受客户的委托完成货物运输的某
+        一个环节或与此有关的环节，涉及这方面的工作都可以直接或间接的找货代来完成，以节省资本</p>
+   </section>
+    <section class="sec">
+    <h4 id="Bootstrap">Bootstrap</h4>
+    <p>你做货代你造么, 你要看起运港/目的港/客户是否买单报关/是否需要提货/贸易术语是什么/走空运还是走海运/货物尺寸是啥样的/有没有指定的</p>
+    </section>
+</div>
+
+
+<div>
+    <div class="col-md-8" style="border:1px solid red">8</div>
+    <div class="col-md-4 info-right" style="border:1px solid red">
+        <blockquote><h2>热门资讯</h2></blockquote>
+        <div class="container-fluid">
+            <div class="row info-content">
+                <div class="col-md-5 col-sm-5 col-xs-5 hidden-sm hidden-xs" style="padding:0;margin:0;">
+                    <img src="../images/01.jpg" class="img-responsive" alt=""/>
+                </div>
+                <div class="col-md-7 col-sm-7 col-xs-7">
+                    <h4>六家互联网公司发声明 抵制流量劫持等违法行为</h4>
+                    <p>admin 15 / 10 / 11</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ul class="list-unstyled list-inline">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+</ul>
+
+<dl class="dl-horizontal">
+    <dt>热门资讯</dt>
+    <dd>六家互联网公司发声明 抵制流量劫持等违法行为</dd>
+</dl>
+
+<body style="margin: 50px" class="table-responsive">
+<table class="table table-striped table-bordered table-hover">
+    <thead>
+    <tr>
+        <th>编号</th>
+        <th>姓名</th>
+        <th>年龄</th>
+        <th>性别</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th>1</th>
+        <th>张三</th>
+        <th>23</th>
+        <th>男</th>
+    </tr>
+
+    <tr class="info">
+        <th>2</th>
+        <th>张三</th>
+        <th>23</th>
+        <th>男</th>
+    </tr>
+
+    <tr class="success">
+        <th>3</th>
+        <th>张三</th>
+        <th>23</th>
+        <th>男</th>
+    </tr>
+
+    <tr>
+        <th>4</th>
+        <th>张三</th>
+        <th>23</th>
+        <th>男</th>
+    </tr>
+    </tbody>
+</table>
+</body>
+
+<a href="###" class="btn btn-primary">link</a>
+<input type="button" class="btn btn-default" value="123"/>
+<button class="btn btn-default">ann</button>
+
+
+<form class="form-inline">
+    <div class="form-group">
+        <label for="">电子邮箱：</label>
+        <input type="email" class="form-control" placeholder="请输入你的邮箱"/>
+    </div>
+    <div class="form-group">
+    <label for="">密码</label>
+    <input type="password" class="form-control" placeholder="请输入你的密码"/>
+    </div>
+</form>
+
+
+    <div class="input-group col-md-3" style="float:left">
+        <div class="input-group-addon">波特率</div>
+        <input type="number" class="form-control input-sm">
+    </div>
+    <div class="col-md-3"></div>
+
+
+
+<div class="input-group col-md-3" style="float:left">
+    <div class="input-group-addon">帧类型</div>
+    <select id="dateFrameType" class="form-control input-sm">
+        <option value="">1</option>
+        <option value="">2</option>
+        <option value="">3</option>
+    </select>
+</div>
+
+
+
+
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+
+    function removeSec(e){
+        console.log(e);
+        $(e).parents(".sec").remove();
+        $("#content").scrollspy("refresh");
+    }
+
+</script>
+
+
+</body>
+</html>

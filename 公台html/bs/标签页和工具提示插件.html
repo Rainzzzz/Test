@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>下拉菜单和滚动监听插件</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="../font/iconfont/iconfont.css">
+</head>
+<body>
+
+<div class="dropdown" id="dr">
+    <button class="btn btn-primary" data-toggle="dropdown" data-target="dr">
+        下拉菜单
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+        <li><a href="#">首页</a></li>
+        <li><a href="#">资讯</a></li>
+        <li><a href="#">产品</a></li>
+        <li><a href="#">关于</a></li>
+    </ul>
+
+</div>
+
+<nav id="nav1" class="navbar navbar-default">
+    <a href="#" class="navbar-brand">web开发</a>
+    <ul class="nav navbar-nav">
+        <li><a href="#html5">HTML5</a></li>
+        <li><a href="#Bootstrap">BootStrap</a></li>
+        <li class="dropdown" >
+            <a href="#" data-toggle="dropdown" data-target="js">JavaScript<span class="caret"></span></a>
+            <ul class="dropdown-menu" id="js">
+                <li><a href="#jQuery">jQuery</a></li>
+                <li><a href="#Yui">Yui</a></li>
+                <li><a href="#Extjs">ExtJS</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+
+
+<nav id="nav2" class="navbar navbar-default">
+    <a href="#" class="navbar-brand">web开发</a>
+    <ul class="nav navbar-nav">
+        <li><a href="#html5">HTML5</a></li>
+        <li><a href="#Bootstrap">BootStrap</a></li>
+        <li class="dropdown" >
+            <a href="#" data-toggle="dropdown" data-target="js">JavaScript<span class="caret"></span></a>
+            <ul class="dropdown-menu" id="js">
+                <li><a href="#jQuery">jQuery</a></li>
+                <li><a href="#Yui">Yui</a></li>
+                <li><a href="#Extjs">ExtJS</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+
+<div data-target="#nav1" data-offset="0" data-spy="scroll" style="padding:0 20px;height:200px;overflow:auto;position:relative">
+
+   <section class="sec">
+
+    <h4 id="html5">HTML5 <a href="#" onclick="removeSec(this)">删除</a></h4>
+    <p>货代，从字面来看是货运代理的简称。从工作内容来看是接受客户的委托完成货物运输的某
+        一个环节或与此有关的环节，涉及这方面的工作都可以直接或间接的找货代来完成，以节省资本</p>
+   </section>
+    <section class="sec">
+    <h4 id="Bootstrap">Bootstrap</h4>
+    <p>你做货代你造么, 你要看起运港/目的港/客户是否买单报关/是否需要提货/贸易术语是什么/走空运还是走海运/货物尺寸是啥样的/有没有指定的</p>
+    </section>
+    <section class="sec">
+    <h4 id="jQuery">jQurey</h4>
+    <p>要找称心的货代来这里看看吧,还可以学习货代知识。 ,九九外贸论坛... 2.主板块用于讨论和交流货代信息之用,严禁纯广告。 3.外贸人可以在本版发布找货代的信息</p>
+    </section>
+    <section class="sec">
+    <h4 id="Yui">Yui</h4>
+    <p>来说或许有点艰难,至少比前几年更加艰难,但是我们还得坚持,因为我们是打不垮累不倒的业务员,加油吧,春天来了,时光如梭,抓紧每一天的每</p>
+    </section>
+    <section class="sec">
+    <h4 id="Extjs">Extjs</h4>
+    <p>琪邦(Kbans)国际,上海货运代理服务知名服务品牌,上海货代公司十佳服务品牌,致力于为客户提供更周全更快速的国际贷代服务。业务涵盖海运整箱/拼箱服务,空运/陆运...</p>
+    </section>
+</div>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+
+    function removeSec(e){
+        console.log(e);
+        $(e).parents(".sec").remove();
+        $("#content").scrollspy("refresh");
+    }
+
+</script>
+
+
+</body>
+</html>

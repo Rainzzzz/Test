@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        /*
+         this指的是当前的对象，
+         她是一个关键词，不能用做变量
+         只能读不能写，只能用不能修改
+
+         1、在函数外使用  this指向window
+         2、在函数内使用  1函数是直接被调用的 this指向window
+         2被事件所调用，并且是以赋值的形式出现  谁调用了函数，this指向谁
+         */
+window.onload=function(){
+    var lis1=document.getElementsByTagName("li");
+    for(var i=0;i<lis1.length;i++){
+        lis1[i].onclick=function(){
+            /*在循环的时候，给每个元素都添加了点击事件，
+            想要在点击事件里找到那个对象，不能用i的值作为下标去取，
+            要用this，this指的就是点击的那个对象*/
+            this.style.background="red";/*这里的this找点击的那个对象*/
+        }
+    }
+}
+
+    </script>
+</head>
+<body>
+<ul>
+    <li>red</li>
+    <li>green</li>
+    <li>blue</li>
+    <li>yellow</li>
+    <li>pink</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        img{
+            display:block;
+
+        }
+    </style>
+    <script>
+window.onload=function(){
+    var next=document.getElementById("next");
+    var prev=document.getElementById("prev");
+    var pic=document.getElementById("pic");
+    var n=1;
+    next.onclick=function(){
+        n=n+1;
+        if(n>4){
+            n=1;
+        }
+        pic.src="images/tour"+n+".png";
+    }
+    prev.onclick=function(){
+        n=n-1;
+        if(n<1){
+            n=4;
+        }
+        pic.src="images/tour"+n+".png";
+    }
+}
+    </script>
+</head>
+<body>
+<input type="button" id="prev" value="上一张">
+<input type="button" id="next" value="下一张">
+
+<img src="images/tour1.png" id="pic" alt="1">
+</body>
+</html>

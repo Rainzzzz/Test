@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en" ng-app="drag">
+<head>
+    <meta charset="UTF-8">
+
+
+    <title>模态框</title>
+
+    <link rel="stylesheet" href="../font/iconfont/iconfont.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="iconfont/iconfont.css">
+    <link rel="stylesheet" href="iconfont/demo.css">
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="iconfont/iconfont.js"></script>
+    <script type="text/javascript" src="js/hello.js"></script>
+    <script>
+//        function calc(a,b){。。、
+//            alert(a+b);
+//        }
+//        function calc(a){
+//            alert(a*a);
+//        }
+       /* function add(){
+        for(var i=0,sum=0;i<arguments.length;sum+=arguments[i++]);
+            return sum;
+}
+        alert(add(2,3,4))*/
+    </script>
+    <script>angular.module('drag', []).
+            directive('draggable', function($document) {
+                return function(scope, element, attr) {
+                    var startX = 0, startY = 0, x = 0, y = 0;
+                    element.css({
+                        position: 'relative',
+                        border: '1px solid red',
+                        backgroundColor: 'lightgrey',
+                        cursor: 'pointer'
+                    });
+                    element.on('mousedown', function(event) {
+                        // 阻止默认的选中内容的拖拽
+                        event.preventDefault();
+                        startX = event.screenX - x;
+                        startY = event.screenY - y;
+                        $document.on('mousemove', mousemove);
+                        $document.on('mouseup', mouseup);
+                    });
+
+                    function mousemove(event) {
+                        y = event.screenY - startY;
+                        x = event.screenX - startX;
+                        element.css({
+                            top: y + 'px',
+                            left:  x + 'px'
+                        });
+                    }
+
+                    function mouseup() {
+                        $document.unbind('mousemove', mousemove);
+                        $document.unbind('mouseup', mouseup);
+                    }
+                }
+            });</script>
+    <style>
+        @media screen and (min-width:1200px){ #page{ width: 1100px; }#content,.div1{width: 730px;}#secondary{width:310px} }
+
+        @media screen and (min-width: 960px) and (max-width: 1199px) { #page{ width: 960px; }#content,.div1{width: 650px;}#secondary{width:250px}select{max-width:200px} }
+
+        @media screen and (min-width: 768px) and (max-width: 959px) { #page{ width: 900px; }#content,.div1{width: 620px;}#secondary{width:220px}select{max-width:180px} }
+
+        @media only screen and (min-width: 480px) and (max-width: 767px){ #page{ width: 450px; }#content,.div1{width: 420px;position: relative; }#secondary{display:none}#access{width: 450px; }#access a {padding-right:5px}#access a img{display:none}#rss{display:none}#branding #s{display:none} }
+
+        @media only screen and (max-width: 479px) { #page{ width: 300px; }#content,.div1{width: 300px;}#secondary{display:none}#access{width: 330px;} #access a {padding-right:10px;padding-left:10px}#access a img{display:none}#rss{display:none}#branding #s{display:none}#access ul ul a{width:100px} }
+
+    </style>
+
+</head>
+<body>
+
+
+
+<div class="container">
+<div class="row" style="background-color:blue;height:30px">
+    <div class="col-xs-12 col-md-8" style="background-color: yellow ;height:30px">.col-md-1</div>
+    <div class="col-xs-6 col-md-4 " style="background-color: red ;height:30px">col-md-5</div>
+</div></div>
+<br/>
+
+
+
+<div class="row">
+    <div class="col-xs-1">
+        <input type="text" class="form-control" placeholder=".col-xs-2">
+    </div>
+    <div class="col-xs-3">
+        <input type="text" class="form-control" placeholder=".col-xs-3">
+    </div>
+    <div class="col-xs-4">
+        <input type="text" class="form-control" placeholder=".col-xs-4">
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<span draggable>Drag ME</span>
+</body>
+</html>

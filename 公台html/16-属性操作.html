@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<input type="button" id="btn" value="按钮" style="width:50px;height:50px;background:#f00;font-size: 20px;" >
+<script>
+    var btn=document.getElementById("btn");
+    btn,onclick=function(){
+      //  alert(btn,type);
+        console.log(btn.style);
+        //btn.value="小按钮";
+        console.log(btn.style["font-size"]);/*如果属性是单一属性，或者属性中带横杆，用点操作是取不到的，而且还会报错，需要用中括号[]*/
+console.log(btn.style["height"]);
+        console.log(btn.style.fontSize);/*如果用点操作符获取，那必须将font-size中横杆去掉将并将s大写*/
+
+
+
+    }
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+@charset "utf-8";
+body,h1,ul{
+    margin:0;
+    padding: 0;
+}
+ul{
+    list-style:outside none none;
+   
+}
+a{
+    text-decoration:none;/*去除文字格式-去除下划线*/
+}
+#nav{
+    width:100%;
+    height:70px;
+    background-color: #333333;
+}
+#nav .center{
+    height:70px;
+    width:1263px;
+
+    margin:0 auto;
+}
+#nav .logo{
+    width: 240px;
+    height:70px;
+background-image:url(images/Jellyfish.jpg);
+    text-indent:-9999px;/*首行缩进*/
+    float:left;
+}
+#nav .link{
+    width:650px;
+   color:#eee;
+    float:right;
+    height:70px;
+    line-height:70px;/*垂直居中，设置行高就可以在垂直方向上居中*/
+}
+#nav .link li{
+    width:120px;
+    text-align:center;/*文字居中*/
+    float:left;
+}
+#nav .link a{
+    color:#eee;
+    display:block;/*转换为区块*/
+}
+#nav .link a:hover,#nav .active a{
+    background-color:#000;
+}
+

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    window.onload=function(){var btn=document.getElementById("btn");
+    console.log(btn.value);
+        var text=document.getElementById("text");
+        console.log(text.value);
+        btn.onclick=function(){
+            console.log(text.value);
+        }
+
+
+    }
+</script>
+<input type="button" id="btn" value="按钮">
+<input type="text" name="text" id="text" value="这是一段文字">
+</body>
+</html>

@@ -1,0 +1,108 @@
+@charset "utf-8";
+body,h1,ul{
+    margin:0;
+    padding: 0;
+}
+ul{
+    list-style:outside none none;
+   
+}
+a{
+    text-decoration:none;/*去除文字格式-去除下划线*/
+}
+#nav{
+    width:100%;
+    height:70px;
+    background-color: #333333;
+    min-width:1263px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.3);
+    /*提升阴影所在层*/
+    position:relative;
+    z-index:999;
+}
+#nav .center{
+    height:70px;
+    width:1263px;
+    margin:0 auto;
+}
+#nav .logo{
+    width: 240px;
+    height:70px;
+background-image:url(images/Jellyfish.jpg);
+    text-indent:-9999px;/*首行缩进*/
+    float:left;
+}
+#nav .link{
+    width:650px;
+    color:#eee;
+    float:right;
+    height:70px;
+    line-height:70px;/*垂直居中，设置行高就可以在垂直方向上居中*/
+}
+#nav .link li{
+    width:120px;
+    text-align:center;/*文字居中*/
+    float:left;
+}
+#nav .link a{
+    color:#eee;
+    display:block;/*转换为区块*/
+}
+#nav .link a:hover,#nav .active a{
+    background-color:#000;
+}
+.hide{
+    display: none;
+}
+#search{
+width:100%;
+    height:600px;
+    background:url(images/1920X600.png) no-repeat center;
+    min-width:1263px;
+    position:relative;
+}
+#search .center1{
+    width:600px;
+    height:60px;
+    background-color: black;
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin:-30px 0 0 -300px;
+    opacity:0.6;/*透明度*/
+    border-radius:10px;
+}
+#search .search{
+    width:446px;
+    height:52px;
+    background-color:#fff;
+
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin:-27px 0 0 -296px;
+    color:#666;
+    border: 1px solid #666;
+    border-radius:10px;
+    font-size:24px;
+    padding:0 10px;
+    outline:none;
+}
+
+#search .button{
+    width:120px;
+    height:52px;
+    background-color:#fff;
+
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin:-27px 0 0 175px;
+    color:#666;
+    border: 1px solid #eee;
+    border-radius:10px;
+    font-size:24px;
+font-weight:bold;
+    outline:none;
+    cursor:pointer;/*手型*/
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+    </style>
+
+    <script>
+        window.onload=function() {
+            var pre = document.getElementById("pre");
+            var next = document.getElementById("next");
+            var pic = document.getElementById("pic");
+            var n = 0;
+            var imgArr=["tour1","tour2","tour3","tour4"];
+
+
+
+            next.onclick = function () {
+                n++;
+                if (n<imgArr.length) {
+                    pic.src = "images/" + imgArr[n] + ".png";
+                }else{n=0;
+                    pic.src = "images/" + imgArr[n] + ".png";
+                }
+
+            }
+
+            pre.onclick=function(){
+                n--;
+                if(n>=0) {
+                    pic.src="images/"+imgArr[n]+".png";
+                }else{
+                    n=imgArr.length-1;
+                    pic.src="images/"+imgArr[n]+".png";
+                }
+
+            }
+
+
+        }
+    </script>
+</head>
+<body>
+<input type="button" value="上一张" id="pre">
+<input type="button" value="下一张" id="next">
+<br>
+<img src="images/tour1.png" id="pic" alt="1">
+</body>
+</html>

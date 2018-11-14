@@ -1,0 +1,364 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face {font-family: 'iconfont';
+    src: url('iconfont.eot'); /* IE9*/
+    src: url('iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('iconfont.woff') format('woff'), /* chrome、firefox */
+    url('iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+/* 全局CSS定义 */
+body{font-family:"\5B8B\4F53","Arial Narrow",HELVETICA;text-align:center;margin:0 auto;padding:0;background:#FFF;font-size:12px;color:#333;}
+body > div{text-align:center;margin-right:auto;margin-left:auto;} 
+div,form,ul,ol,li,span,p{margin:0;padding:0;border:0;}
+img,a img{border:0;margin:0;padding:0;}
+h1,h2,h3,h4,h5,h6{margin:0;padding:0;font-size:12px;font-weight:normal;}
+table,td,input{font-size:12px;padding:0}
+
+body{
+   /*background-image:url(images/Desert.jpg);设置背景*/
+    background-position: center;
+    background-size: cover;/*背景图等比例拉伸覆盖*/
+   /* background-size: 100%;浏览器外框拉伸时背景图同样也会拉伸*/
+    /*background-attachment: fixed;背景图固定，不会随右侧滚动条的上下移动而移动*/
+}
+
+
+#house li{
+    margin-left:10px;
+    margin-top: 10px;
+	width:114px;
+    height:226px;
+	float:left;
+	padding:10px;
+	display:inline-block;
+	}
+#house li img{
+    position:fixed;/*让图片固定在浏览器的某个位置*/
+}
+#house li:hover{
+	box-shadow:0px 0px 4px 2px rgba(0,0,0,0.3);
+	
+		}
+		
+.iconfont{
+    float:left;
+    font-family:"iconfont" !important;
+    font-size:48px;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;}
+
+i:hover{
+
+    transform:scale(1.5);
+    transform:translateX(3px);
+    animation-iteration-count:infinite;
+    animation-timing-function:ease;
+    animation-name:ceshi6;
+    animation-duration: 0.45s;
+}
+
+
+@keyframes ceshi6{
+
+    0%{
+        transform:rotate(10deg);
+        /*margin-left: 0px;*/
+    }
+    50%{
+        transform:rotate(-10deg);
+        /*margin-left:10px;*/
+    }/*效果2，这种方法只能将动画单向变化*/
+    100%{
+        transform:rotate(0deg);
+        /*margin-left:10px;*/
+    }/*效果2，这种方法只能将动画单向变化*/
+
+}
+
+.k{
+   border:2px red solid;
+   border-radius:4px;/*圆角*/
+}
+.abc{
+    color:blue;
+}
+.def {
+    font-size: 20px;
+}
+.words{
+    font-size:20px;
+    font-weight:bold;/*文字加粗*/
+    color:red !important;/*其中 !important 是定义最高优先级*/
+
+}
+[href]{
+    color:orange;
+}/*属性选择器，直接通过两个中括号里面包含的属性名即可*/
+[type="password"]{
+    border:1px red solid;
+}/*匹配属性值的属性选择器*/
+[href^="http"]{
+    color:orange;
+}/*属性值开头匹配的属性选择器*/
+[href$=".com"]{
+    color:orange;
+}/*属性值结尾匹配的属性选择器*/
+[href*="baidu"]{
+    color:orange;
+}/*属性值包含指定字符的属性选择器，属于模糊搜索，效率低不推荐使用*/
+
+p,b,i,span{
+
+}/*同时选择多个选择器*/
+p b{
+    color:blue;
+}/*后代选择器,选择p元素内部所有b元素，不在乎b元素的深度*/
+p>b{
+
+}/*子选择器只能选择父元素向下一级的元素*/
+
+p::first-line{
+    color:red;/*设置p标签首行颜色*/
+}
+p{
+    font-family:楷体，微软雅黑;/*优先应用楷体，如果用户电脑没楷体就应用微软雅黑*/
+    font:italic bold 20px 楷体;/*italic指倾斜*/
+    /*text-decoration:underline;添加下划线*/
+    background-color:silver;
+   /* text-align: left;文本居左
+    text-align:right;文本居右
+    text-align:center;文本居中*/
+    /*white-space:pre;空格符被保留，文本会在排满或遇换行符时换行*/
+    /*letter-spacing:5px;中文文字间距
+    word-spacing:5px;英文单词间距*/
+    /*line-height:30px;行高*/
+}
+input:enabled{
+    border:1px red solid;/*启用的选择框的样式*/
+    border-radius: 5px;
+}
+input:checked{
+    display:none;/*隐藏*/
+}
+input:valid{
+    border:1px green solid;/*输入内容有效时的样式*/
+}
+input:invalid{
+    border:2px red solid;/*输入内容无效时的样式*/
+}
+a:link{
+    color:red;/*链接未访问显示的样式*/
+}
+a:visited{
+    color:blue;/*链接访问过后显示的样式*/
+}
+a:hover{
+    color:orange;/*鼠标悬停时显示的颜色*/
+}
+a:active{
+    color:green;/*鼠标点中不松时显示的颜色*/
+}
+::selection{
+    color:red;/*鼠标选中文字时，文字的颜色，兼容性不是很好*/
+    /*color:rgba(212,30,89,0.5);*/
+}
+a{
+    /*text-decoration:none;将超链接的下划线去除*/
+}
+div{
+    background:silver;
+    width:200px;
+    height:50px;
+    min-width:50px;
+    max-width:250px;
+    padding-top:10px;
+    padding-right:20px;
+    padding-botom:30px;
+    padding-left:40px;
+    padding:10px 20px 30px 40px;
+    margin-top:10px;
+    margin:right:20px;
+    margin-bottom:30px;
+    margin-left:40px;
+    /*overflow:auto;*//*浏览器自行处理溢出内容，如果有溢出内容，就显示滚动条，否则就不显示滚动条*/
+/*    display:inline;将块转成行
+    display:block;将行转成块*/
+}
+/*
+div,span{
+    background:silver;
+    width:200px;
+    height:50px;
+    display:inline-block;转换成行内块（内联块）
+}*/
+
+#a{
+    background:red;
+    float:left;
+}
+#b{
+    background:blue;
+    margin-right:10px;
+   /* clear: left;前一个元素浮动后，后面的元素如果不想自动堆叠处理就需要使用clear*/
+}
+#c{
+    background:green;
+    float:left;
+}
+div{
+    opacity:0.9;/*设置透明度*/
+    width:200px;
+    height:200px;
+    /*border-style:solid;*/
+    border-color: #ffd27b;
+    border-width:4px;/*边框宽度*/
+    /*border-style:dashed;!*边框样式-破折线边框*!*/
+   /* border-top-style:solid;
+    border-top-width:5px;*/
+}
+#pic img{
+    width:100px;
+    height:100px;
+    border-radius:100px;/*将图片处理成圆形用作用户图像*/
+    cursor:move;/*鼠标滑到图片上时会变成十字型光标，提示可移动*/
+}
+/*
+div b:first-child{
+    background-color: transparent;将其背景色设置为透明,不写即默认透明
+}
+table,tr,td,th{
+    font-family:黑体;
+    font-size: 20px;
+    width:400px;
+    height:60px;
+    color:yellow;
+    text-align: center;/*文字居中*/
+    /*border-collapse:separate;设置表格边框线虚线*/
+    /*border-collapse:collapse;设置表格边框线实线*/
+    border:4px yellow solid;/*设置表格边框样式*/
+    border-spacing:4px;/*设置边框线内间距*/
+    outline:3px solid black;
+}
+.cc{
+    width:200px;
+    font-size: 20px;
+    color:yellow;
+    list-style: inside url(images/右转灯.png);/*设置序号为图片样式，第二行文字可与序号对齐*/
+}
+b{
+    /*vertical-align:sub;设置下标*/
+    vertical-align: super;/*设置上标*/
+}
+em{
+    font-size: 20px;
+    color: yellow;
+    vertical-align:130px;/*调整文字垂直位置*/
+
+}
+#ceshi{
+    width:300px;
+    height:300px;
+    background-color: #b3d4fc;
+    text-align:left;/*让文字居中*/
+    /*padding-left:0px;调整文字水平位置的常用方式*/
+}
+#ce1{
+    width:160px;
+    background-color:silver;
+    white-space:nowrap;/*文本不换行*/
+    /*overflow: hidden;溢出隐藏*/
+    text-overflow:ellipsis;/*文本溢出部分使用省略号代替，有些标题会这样使用*/
+
+}
+#ce2{
+    width:500px;
+    height:200px;
+    background-image:linear-gradient(to top right,orange,green);/*橙色到绿色向右上角渐变，可添加颜色进行多色渐变*/
+
+}
+#ce3{
+    /*background-color:red;
+    background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0));/!*在红色图层上新建一个黑色渐变图层，通过设置透明度渐变，实现效果*!/*/
+   /* transform:scale(1.5);/*围绕中心放大1.5倍*/
+   /* transform:translateY(20px);/!*沿y轴平移*!/*/
+
+    /*transform:rotate(100deg);/!*围绕中心点(默认)顺时针旋转100度*!/
+    transform-origin:0px 0px;/!*设置旋转固定点位置*!/*/
+
+    /*transform:skewX(45deg);/!*沿着X轴倾斜45度*!/*/
+    perspective: 1000px;
+    transform-style:preserve-3d;/*指定该区域实现3d效果*/
+
+}
+img{
+    /*transform:scale3D(1.1,1.3,1.5)/!*分别沿X，Y，Z轴方向放大1.1倍，1.3倍，1.5倍*!/ rotateX(45deg);/!*沿着X轴旋转45度*!/*/
+    transform:rotate3D(0,1,0,45deg);/*0表示关闭，1表示启用，这里表示沿着Y轴旋转45度*/
+}
+#ce4{
+    vertical-align:400px;
+    width:200px;
+    height:200px;
+    border:1px solid green;
+    background-color: white;
+    /*transition-property:background-color,color,margin-left;/!*设置过渡效果属性为背景颜色过渡加字体颜色过渡加偏移过渡。。。注意这些属性必须是下面的#ce4:hover里面所包括的*!/*/
+    /*transition-property:all;/!*将#ce4:hover里面设置的各类属性全部加入*!/*/
+    /*transition-duration:5s;/!*过度效果时间为5秒*!/*/
+    /*transition-timing-function:ease;/!*过渡速度由快到慢这是默认的过渡效果*!/*/
+    /*transition-timing-function:linear;/!*过渡速度为恒速*!/*/
+    /*transition-delay:0s,2s,0s;/!*鼠标滑过后背景颜色延迟开始过渡时间为0秒，字体颜色过渡延迟时间为2秒，偏移过渡延迟时间为0秒*!/*/
+    /*上述方法过于繁琐，以下是常用方法：*/
+    transition:background-color 5s ease 0s,color 5s ease 1s,margin-left 5s ease 0s ;/*这里的三个属性分别指“过渡时间”、“过渡速度”、“延迟开始过渡时间”*/
+}
+#ce4:hover{
+    background-color: black;
+    color:white;
+    margin-left:100px;
+}
+/*动画测试开始*/
+#ce5{
+    width:200px;
+    height:200px;
+    background-color: white;
+    border:1px solid green;
+
+   /* animation-name:myani;*/
+    /*animation-duration: 1s;/!*设置过渡时间*!/*/
+   /* animation-timing-function:ease;/!*ease是由快到慢，逐渐变慢；linear是恒速；ease-in是由慢到快，加速状态；ease-out是由快到慢，减速状态；*!/*/
+   /* animation-delay:1.5s;/!*延迟动画开始时间*!/*/
+    /*animation-iteration-count:2;/!*设置循环播放次数*!/*/
+    /*animation-iteration-count:infinite;/!*设置无限循环播放*!/*/
+    /*animation-fill-mode: forwards;/!*动画只向前播放*!/*/
+    /*以下是实际应用经常会用的方式*/
+    /*animation:myani 1s ease 2 normal 1s ;/!*属性依次是 名称，过渡时间，过渡时速率，设置缓动方向交替（normal指每次播放向前，alternate指一次向前一次向后这样交替），延迟开启动画时间*!/*/
+
+
+}
+@keyframes myani{
+    /*0%{
+        background-color: white;
+        margin-left:0px;
+    }
+    50%{
+        background-color: black;
+        margin-left: 100px;
+    }
+    100%{
+        background-color: white;
+        margin-left:0px;
+    }*//*效果1,这种方法更加灵活，可以让动画变化后恢复到初始状态*/
+
+    from{
+        background-color: white;
+        margin-left: 0px;
+    }
+    to{
+        background-color: black;
+        margin-left:100px;
+    }/*效果2，这种方法只能将动画单向变化*/
+}
+/*动画测试结束*/

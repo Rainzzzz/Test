@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div{
+            width:200px;
+            height:200px;
+            border:1px solid red;
+            display: none;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var inputs=document.querySelectorAll("input");
+            var divs=document.querySelectorAll("div");
+            var last=inputs[0];/*这个变量存的是上一次点击的对象，默认为第0个；*/
+
+for(var i=0;i<inputs.length;i++){
+    inputs[i].index=i;//inputs[0].index=0   inputs[1].index=1   inputs[2].index=2
+    inputs[i].onclick=function(){
+        last.style.background="";//吧上一次点击对象的背景色去掉
+        //吧上一个对应的div隐藏
+        divs[last.index].style.display="none";
+         this.style.background="red";
+
+        divs[this.index].style.display="block";
+
+        last=this;
+
+
+    }
+
+
+}
+        }
+
+
+    </script>
+</head>
+<body>
+<input type="button" id="" value="选项1" style="background:yellow;">
+<input type="button" id="" value="选项2" >
+<input type="button" id="" value="选项3" >
+
+<div  style="display: block;">111</div>
+<div>222</div>
+<div>333</div>
+</body>
+</html>
